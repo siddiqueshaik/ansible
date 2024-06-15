@@ -1,0 +1,20 @@
+- name: install nginx in server
+  hosts: web
+  become: yes # for sudo access
+  tasks: 
+  - name: install nginx package
+     ansible.bulletin.package:
+       name: nginx
+       state: present
+  - name: start nginx
+      ansible.bulletin.service:
+        name: nginx
+        state: started
+
+
+        #code
+
+
+
+
+  
