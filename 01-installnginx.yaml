@@ -2,16 +2,10 @@
   become: yes # for sudo access
   tasks: 
   - name: install nginx package
-     ansible.bulletin.package:
+    ansible.builtin.package:
        name: nginx
        state: present
   - name: start nginx
-      ansible.bulletin.service:
+    ansible.builtin.service:
         name: nginx
         state: started
-
-
-
-
-
-  
