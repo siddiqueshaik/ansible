@@ -1,5 +1,5 @@
 - name: install nginx in server
-  hosts: web
+  hosts: 
   become: yes # for sudo access
   tasks: 
   - name: install nginx package
